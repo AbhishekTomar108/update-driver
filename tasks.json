@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileBasenameNoExtension}.exe",
+                "-L\"C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x86/\"",  // Specify the directory
+                "-lsetupapi"  // Include the library directly (without -l flag)
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
